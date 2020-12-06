@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:movie_app/bloc/movie_search_bloc.dart';
-
-import 'search_movie_delegate.dart';
+import 'package:movie_app/ui/widget/search_movie_delegate.dart';
 
 class SearchActionView extends StatelessWidget {
   @override

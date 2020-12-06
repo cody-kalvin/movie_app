@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
+import 'package:movie_app/data/model/movie.dart';
 import 'package:movie_app/ui/movie_detail_page.dart';
 import 'package:movie_app/ui/movie_home_page.dart';
-
-import 'data/model/movie.dart';
 
 Future<void> main() async {
   await DotEnv().load('.env');

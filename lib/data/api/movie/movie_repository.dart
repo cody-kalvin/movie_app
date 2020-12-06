@@ -5,11 +5,10 @@ import 'package:movie_app/data/api/core/api_result.dart';
 import 'package:movie_app/data/api/core/api_service.dart';
 import 'package:movie_app/data/api/core/api_url.dart';
 import 'package:movie_app/data/api/core/response_error.dart';
+import 'package:movie_app/data/api/movie/movie_genre_response.dart';
 import 'package:movie_app/data/api/movie/movie_search_response.dart';
 import 'package:movie_app/data/model/genre.dart';
 import 'package:movie_app/data/model/movie.dart';
-
-import 'movie_genre_response.dart';
 
 class MovieRepository implements ApiService {
   // TODO: Create base client which can have custom interceptors (i.e. retry, custom headers) and handle request errors
