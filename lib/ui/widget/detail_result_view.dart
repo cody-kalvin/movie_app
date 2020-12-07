@@ -41,9 +41,13 @@ class DetailResultView extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 8),
       child: Row(
         children: <Widget>[
-          _buildTitleView(movie),
-          Spacer(),
-          _buildRatingsView(movie),
+          Expanded(
+            child: _buildTitleView(movie),
+          ),
+          SizedBox(
+            width: 100,
+            child: _buildRatingsView(movie),
+          ),
         ],
       ),
     );
