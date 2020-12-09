@@ -5,6 +5,7 @@ import 'package:movie_app/bloc/movie_event.dart';
 import 'package:movie_app/bloc/movie_search_state.dart';
 import 'package:movie_app/data/api/core/api_url.dart';
 import 'package:movie_app/data/model/movie.dart';
+import 'package:movie_app/ui/movie_detail_page.dart';
 import 'package:movie_app/util/date_util.dart';
 
 class SearchMovieDelegate extends SearchDelegate<Movie> {
@@ -72,7 +73,7 @@ class SearchMovieDelegate extends SearchDelegate<Movie> {
           child: InkWell(
             splashColor: Colors.blue.withAlpha(30),
             onTap: () => Navigator.of(context).pushNamed(
-              '/detail',
+              MovieDetailPage.name,
               arguments: movie,
             ),
             child: _buildListItem(movie),

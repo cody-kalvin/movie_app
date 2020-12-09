@@ -7,6 +7,7 @@ import 'package:movie_app/bloc/movie_genre_state.dart';
 import 'package:movie_app/data/api/core/api_url.dart';
 import 'package:movie_app/data/model/genre.dart';
 import 'package:movie_app/data/model/movie.dart';
+import 'package:movie_app/ui/movie_detail_page.dart';
 import 'package:movie_app/util/date_util.dart';
 
 class GenreResultView extends StatelessWidget {
@@ -67,7 +68,7 @@ class GenreResultView extends StatelessWidget {
           child: InkWell(
             splashColor: Colors.blue.withAlpha(30),
             onTap: () => Navigator.of(context).pushNamed(
-              '/detail',
+              MovieDetailPage.name,
               arguments: movie,
             ),
             child: _buildListItem(movie),
