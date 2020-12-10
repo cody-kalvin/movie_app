@@ -19,7 +19,7 @@ class MovieRepository implements ApiService {
     ApiResult<List<Movie>> result;
 
     try {
-      final Response response = await _client.get(ApiUrl.searchMovie() + query);
+      final Response response = await _client.get(ApiUrl.searchMovie(query));
       final MovieSearchResponse data =
           MovieSearchResponse.fromJson(response.data);
       result = ApiResult(

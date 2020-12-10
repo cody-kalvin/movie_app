@@ -8,8 +8,8 @@ class ApiUrl {
 
   static String imageUrl() => 'https://image.tmdb.org/t/p/original/';
 
-  static String searchMovie() =>
-      '${baseUrl()}search/movie?api_key=$_apiKey&query=';
+  static String searchMovie(String query) =>
+      '${baseUrl()}search/movie?api_key=$_apiKey&query=$query';
 
   static String genreMovie(Genre genre) =>
       '${baseUrl()}genre/${genre.value}/movies?api_key=$_apiKey';
