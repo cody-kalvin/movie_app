@@ -12,8 +12,7 @@ class ApiUrl {
       '${baseUrl()}search/movie?api_key=$_apiKey&query=';
 
   static String genreMovie(Genre genre) =>
-      '${baseUrl()}genre/${genre.value}/movies?api_key=$_apiKey&query=';
+      '${baseUrl()}genre/${genre.value}/movies?api_key=$_apiKey';
 
-  static String detailMovie(int id) =>
-      '${baseUrl()}movie/$id?api_key=$_apiKey&query=';
+  static String detailMovie(int id) => '${baseUrl()}movie/$id?api_key=$_apiKey';
 }
