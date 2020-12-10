@@ -8,7 +8,10 @@ import 'package:movie_app/util/date_util.dart';
 class DetailResultView extends StatelessWidget {
   final Movie movie;
 
-  DetailResultView({this.movie});
+  const DetailResultView({
+    Key key,
+    this.movie,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

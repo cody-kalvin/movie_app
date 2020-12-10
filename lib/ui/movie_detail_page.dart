@@ -7,7 +7,10 @@ class MovieDetailPage extends StatelessWidget {
 
   final Movie movie;
 
-  MovieDetailPage({this.movie});
+  const MovieDetailPage({
+    Key key,
+    this.movie,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

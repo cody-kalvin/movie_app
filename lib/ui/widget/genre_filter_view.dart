@@ -6,16 +6,18 @@ import 'package:movie_app/bloc/movie_genre_bloc.dart';
 import 'package:movie_app/data/model/genre.dart';
 
 class GenreFilterView extends StatelessWidget {
+  const GenreFilterView({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     final List<Genre> genres = Genre.values;
 
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 8),
+      padding: const EdgeInsets.symmetric(vertical: 8),
       height: 50,
-      decoration: BoxDecoration(
-        border: Border(
-          bottom: BorderSide(
+      decoration: const BoxDecoration(
+        border: const Border(
+          bottom: const BorderSide(
             width: 1,
             color: Colors.black45,
           ),
@@ -33,12 +35,14 @@ class GenreFilterView extends StatelessWidget {
                 Colors.transparent,
               ),
               textStyle: MaterialStateProperty.all<TextStyle>(
-                TextStyle(fontWeight: FontWeight.normal),
+                const TextStyle(
+                  fontWeight: FontWeight.normal,
+                ),
               ),
             ),
             child: Text(
               genre.name,
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.black87,
               ),
             ),

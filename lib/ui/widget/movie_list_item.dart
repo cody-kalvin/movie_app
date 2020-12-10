@@ -9,10 +9,11 @@ class MovieListItem extends StatelessWidget {
 
   final Function onTap;
 
-  MovieListItem({
+  const MovieListItem({
+    Key key,
     this.movie,
     this.onTap,
-  });
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

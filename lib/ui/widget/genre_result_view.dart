@@ -6,9 +6,13 @@ import 'package:movie_app/bloc/movie_genre_state.dart';
 import 'package:movie_app/data/model/genre.dart';
 import 'package:movie_app/data/model/movie.dart';
 import 'package:movie_app/ui/movie_detail_page.dart';
+import 'package:movie_app/ui/widget/loading_indicator.dart';
 import 'package:movie_app/ui/widget/movie_list_item.dart';
+import 'package:movie_app/ui/widget/signage.dart';
 
 class GenreResultView extends StatelessWidget {
+  const GenreResultView({Key key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -45,15 +49,13 @@ class GenreResultView extends StatelessWidget {
   }
 
   Widget _buildInitialView() {
-    return Center(
-      child: const Text('Find all of your favorite movies here.'),
+    return Signage(
+      message: 'Find all of your favorite movies here.',
     );
   }
 
   Widget _buildLoading() {
-    return Center(
-      child: CircularProgressIndicator(),
-    );
+    return LoadingIndicator();
   }
 
   Widget _buildListView(List<Movie> movies) {
