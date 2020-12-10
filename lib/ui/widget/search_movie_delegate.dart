@@ -4,7 +4,9 @@ import 'package:movie_app/bloc/movie_event.dart';
 import 'package:movie_app/bloc/movie_search_state.dart';
 import 'package:movie_app/data/model/movie.dart';
 import 'package:movie_app/ui/movie_detail_page.dart';
+import 'package:movie_app/ui/widget/loading_indicator.dart';
 import 'package:movie_app/ui/widget/movie_list_item.dart';
+import 'package:movie_app/ui/widget/signage.dart';
 
 class SearchMovieDelegate extends SearchDelegate<Movie> {
   final Bloc<MovieEvent, MovieSearchState> movieBloc;
@@ -17,7 +19,7 @@ class SearchMovieDelegate extends SearchDelegate<Movie> {
   @override
   Widget buildLeading(BuildContext context) {
     return IconButton(
-      icon: BackButtonIcon(),
+      icon: Icon(Icons.arrow_back),
       onPressed: () {
         close(context, null);
       },
@@ -50,15 +52,13 @@ class SearchMovieDelegate extends SearchDelegate<Movie> {
   Widget buildSuggestions(BuildContext context) => Container();
 
   Widget _buildInitialView() {
-    return Center(
-      child: const Text('Find all of your favorite movies here.'),
+    return Signage(
+      message: 'Find all of your favorite movies here.',
     );
   }
 
   Widget _buildLoading() {
-    return Center(
-      child: CircularProgressIndicator(),
-    );
+    return LoadingIndicator();
   }
 
   Widget _buildListView(List<Movie> movies) {
