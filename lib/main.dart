@@ -40,7 +40,9 @@ class MyApp extends StatelessWidget {
     } else if (routeName == MovieDetailPage.name &&
         arguments != null &&
         arguments is Movie) {
-      return MovieDetailPage(movie: arguments);
+      return MovieDetailPage(
+        movie: arguments,
+      );
     } else {
       return MovieHomePage();
     }
