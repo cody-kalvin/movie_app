@@ -17,7 +17,7 @@ Movie _$MovieFromJson(Map json) {
     releaseDate: json['release_date'] as String,
     popularity: (json['popularity'] as num)?.toDouble(),
     adult: json['adult'] as bool,
-    bakdropPath: json['backdrop_path'] as String,
+    backdropPath: json['backdrop_path'] as String,
     voteCount: json['vote_count'] as int,
     genre: (json['genre_ids'] as List)
         ?.map((e) => _$enumDecodeNullable(_$GenreEnumMap, e))
@@ -44,7 +44,7 @@ Map<String, dynamic> _$MovieToJson(Movie instance) => <String, dynamic>{
       'release_date': instance.releaseDate,
       'popularity': instance.popularity,
       'adult': instance.adult,
-      'backdrop_path': instance.bakdropPath,
+      'backdrop_path': instance.backdropPath,
       'vote_count': instance.voteCount,
       'genre_ids': instance.genre?.map((e) => _$GenreEnumMap[e])?.toList(),
       'title': instance.title,

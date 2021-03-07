@@ -34,7 +34,7 @@ class Movie {
   final bool adult;
 
   @JsonKey(name: 'backdrop_path', nullable: true)
-  final String bakdropPath;
+  final String backdropPath;
 
   @JsonKey(name: 'vote_count', nullable: true)
   final int voteCount;
@@ -61,7 +61,7 @@ class Movie {
     this.releaseDate,
     this.popularity,
     this.adult,
-    this.bakdropPath,
+    this.backdropPath,
     this.voteCount,
     this.genre,
     this.title,

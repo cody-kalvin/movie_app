@@ -30,8 +30,8 @@ class DetailResultView extends StatelessWidget {
   Widget _buildBackdropView(Movie movie) {
     Widget backdrop;
 
-    if (movie.bakdropPath != null) {
-      backdrop = Image.network(ApiUrl.imageUrl() + movie.bakdropPath);
+    if (movie.backdropPath != null) {
+      backdrop = Image.network(ApiUrl.imageUrl() + movie.backdropPath);
     } else {
       backdrop = SizedBox.shrink();
     }
